@@ -1,0 +1,44 @@
+package si.fri.rso.samples.imagecatalog.lib;
+
+public class StoreList {
+
+    private Integer id;
+
+    private Integer storeId;
+
+    private Integer productId;
+
+    private Integer cena;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getStoreId() {
+        return storeId;
+    }
+
+    public void setStoreId(Integer storeId) {
+        this.storeId = storeId;
+    }
+
+    public Integer getProductId() {
+        return productId;
+    }
+
+    public void setProductId(Integer productId) {
+        this.productId = productId;
+    }
+
+    public Integer getCena() {
+        return cena;
+    }
+
+    public void setCena(Integer cena) {
+        this.cena = cena;
+    }
+}
