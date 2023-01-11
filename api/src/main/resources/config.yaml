@@ -9,7 +9,7 @@ kumuluzee:
       port: 8080
   datasources:
     - jndi-name: jdbc/ProductDetailDS
-      connection-url: jdbc:postgresql://localhost:5432/product-details
+      connection-url: jdbc:postgresql://localhost:5432/product-detail
       username: dbuser
       password: postgres
       pool:

@@ -117,22 +117,21 @@ public class ProductDetailResource {
             @APIResponse(responseCode = "405", description = "Validation error. Missing parameters.")
     })
     @POST
-    public Response createProductDetail(@RequestBody(
-            description = "DTO object with product detail data.",
-            required = true, content = @Content(
-            schema = @Schema(implementation = ProductDetail.class))) ProductDetail productDetail,
-                                        @RequestBody(
+    @Path("/{productDetailId}")
+    public Response createProductDetail(
+            @Parameter(description = "Product detail ID.", required = true)
+            @PathParam("productDetailId") Integer productDetailId,
+            @RequestBody(
             description = "DTO object with store list data.",
             required = true, content = @Content(
             schema = @Schema(implementation = StoreList.class))) StoreList storeList) {
 
-        if (productDetail.getStores() == null) {
+        if (storeList.getStoreId() == null || storeList.getCena() == null) {
             return Response.status(Response.Status.BAD_REQUEST).build();
         } else {
-            productDetail = productDetailBean.createProductDetail(storeList, productDetail.getId());
+            ProductDetail productDetail = productDetailBean.createProductDetail(storeList, productDetailId);
+            return Response.status(Response.Status.CREATED).entity(productDetail).build();
         }
-
-        return Response.status(Response.Status.CREATED).entity(productDetail).build();
     }
 
     @Operation(description = "Insert store into detail.", summary = "Insert store into detail")

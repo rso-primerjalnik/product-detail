@@ -40,7 +40,7 @@ public class ProductDetailBean {
     @PostConstruct
     private void init() {
         httpClient = ClientBuilder.newClient();
-        baseUrl = "http://store-catalog:8080";
+        baseUrl = "http://store-catalog-service:8080";
     }
 
     public List<ProductDetail> getProductDetails() {

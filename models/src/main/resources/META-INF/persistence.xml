@@ -4,7 +4,10 @@
         <non-jta-data-source>jdbc/ProductDetailDS</non-jta-data-source>
 
         <class>si.fri.rso.samples.imagecatalog.models.entities.ProductDetailEntity</class>
+        <class>si.fri.rso.samples.imagecatalog.models.entities.StoreListEntity</class>
         <class>si.fri.rso.samples.imagecatalog.models.converters.InstantAtributeConverter</class>
+        <class>si.fri.rso.samples.imagecatalog.models.converters.ProductDetailConverter</class>
+        <class>si.fri.rso.samples.imagecatalog.models.converters.StoreListConverter</class>
 
         <properties>
             <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
