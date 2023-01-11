@@ -1,5 +1,5 @@
 kumuluzee:
-  name: image-catalog-service
+  name: product-detail-service
   env:
     name: dev
   version: 1.0.0
@@ -8,8 +8,9 @@ kumuluzee:
     http:
       port: 8080
   datasources:
-    - jndi-name: jdbc/ImageMetadataDS
-      connection-url: jdbc:postgresql://localhost:5432/image-metadata
+    - jndi-name: jdbc/ProductDetailDS
+      connection-url: jdbc:postgresql://localhost:5432/product-details
       username: dbuser
       password: postgres
-      max-pool-size: 20
+      pool:
+        max-size: 1
