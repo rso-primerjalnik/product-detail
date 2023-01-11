@@ -4,16 +4,16 @@ import java.util.List;
 
 public class ProductDetail {
 
-    private Integer id;
+    private Integer productId;
 
     private List<StoreList> stores;
 
     public Integer getId() {
-        return id;
+        return productId;
     }
 
     public void setId(Integer id) {
-        this.id = id;
+        this.productId = id;
     }
 
     public List<StoreList> getStores() {

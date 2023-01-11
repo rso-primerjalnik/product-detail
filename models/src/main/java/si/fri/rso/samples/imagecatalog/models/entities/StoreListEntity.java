@@ -7,8 +7,12 @@ import javax.persistence.*;
 @NamedQueries(value =
         {
                 @NamedQuery(name = "StoreListEntity.getAll",
-                        query = "SELECT storelist FROM StoreListEntity storelist")
-        })
+                        query = "SELECT storelist FROM StoreListEntity storelist"),
+
+                @NamedQuery(name = "StoreListEntity.find",
+                        query = "SELECT storelist FROM StoreListEntity storelist WHERE storelist.storeId = :storeId AND storelist.productId = :productId")
+        }
+        )
 
 public class StoreListEntity {
 
